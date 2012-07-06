@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Why:</b>
+  <%= @survey.why %>
+</p>
+
+<p>
+  <b>How long:</b>
+  <%= @survey.how_long %>
+</p>
+
+<p>
+  <b>App name:</b>
+  <%= @survey.app_name %>
+</p>
+
+<p>
+  <b>Language:</b>
+  <%= @survey.language %>
+</p>
+
+<p>
+  <b>Free:</b>
+  <%= @survey.free %>
+</p>
+
+
+<%= link_to 'Edit', edit_survey_path(@survey) %> |
+<%= link_to 'Back', surveys_path %>

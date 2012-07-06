@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  why: MyText
+  how_long: 1
+  app_name: MyString
+  language: MyString
+  free: MyText
+
+two:
+  why: MyText
+  how_long: 1
+  app_name: MyString
+  language: MyString
+  free: MyText
