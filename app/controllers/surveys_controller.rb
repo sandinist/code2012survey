@@ -17,8 +17,8 @@ class SurveysController < ApplicationController
     respond_to do |format|
       if @survey.save
         #format.html { redirect_to @survey, notice: 'Survey was successfully created.' }
-        format.json { render json: @survey, status: :created, location: @survey }
-        format.xml { render xml: @survey, status: :created, location: @survey }
+        format.json { render json: @survey, status: :created}
+        format.xml { render xml: @survey, status: :created}
       else
         #format.html { render action: "new" }
         format.json { render json: @survey.errors, status: :unprocessable_entity }
