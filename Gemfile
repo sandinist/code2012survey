@@ -6,7 +6,6 @@ gem 'heroku'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
-gem 'sqlite3'
 gem 'slim-rails'
 gem 'rspec-rails'
 
@@ -25,6 +24,10 @@ end
 group :production do
   gem 'therubyracer-heroku'
   gem 'pg'
+end
+
+group :development, :test do
+  gem 'sqlite3'
 end
 
 gem 'jquery-rails'

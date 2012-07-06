@@ -38,16 +38,16 @@ class SurveysController < ApplicationController
 #    end
 #  end
 #
-#  # GET /surveys/new
-#  # GET /surveys/new.json
-#  def new
-#    @survey = Survey.new
-#
-#    respond_to do |format|
-#      format.html # new.html.erb
-#      format.json { render json: @survey }
-#    end
-#  end
+  # GET /surveys/new
+  # GET /surveys/new.json
+  def new
+    @survey = Survey.new
+
+    respond_to do |format|
+      format.html # new.html.erb
+      format.json { render json: @survey }
+    end
+  end
 #
 #  # GET /surveys/1/edit
 #  def edit
