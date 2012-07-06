@@ -1,0 +1,29 @@
+h1 Listing surveys
+
+table
+  tr
+    th Why
+    th How year
+    th Locale
+    th Languages
+    th Free comment
+    th App name
+    th
+    th
+    th
+
+  - @surveys.each do |survey|
+    tr
+      td = survey.why
+      td = survey.how_year
+      td = survey.locale
+      td = survey.languages
+      td = survey.free_comment
+      td = survey.app_name
+      td = link_to 'Show', survey
+      td = link_to 'Edit', edit_survey_path(survey)
+      td = link_to 'Destroy', survey, :confirm => 'Are you sure?', :method => :delete
+
+br
+
+= link_to 'New Survey', new_survey_path

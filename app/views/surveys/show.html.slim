@@ -1,0 +1,24 @@
+p#notice = notice
+
+p
+  strong Why:
+  = @survey.why
+p
+  strong How year:
+  = @survey.how_year
+p
+  strong Locale:
+  = @survey.locale
+p
+  strong Languages:
+  = @survey.languages
+p
+  strong Free comment:
+  = @survey.free_comment
+p
+  strong App name:
+  = @survey.app_name
+
+= link_to 'Edit', edit_survey_path(@survey)
+'|
+= link_to 'Back', surveys_path

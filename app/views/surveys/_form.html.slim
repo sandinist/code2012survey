@@ -1,0 +1,27 @@
+= form_for @survey do |f|
+  - if @survey.errors.any?
+    #error_explanation
+      h2 = "#{pluralize(@survey.errors.count, "error")} prohibited this survey from being saved:"
+      ul
+        - @survey.errors.full_messages.each do |message|
+          li = message
+
+  .field
+    = f.label :why
+    = f.text_area :why
+  .field
+    = f.label :how_year
+    = f.number_field :how_year
+  .field
+    = f.label :locale
+    = f.text_field :locale
+  .field
+    = f.label :languages
+    = f.text_field :languages
+  .field
+    = f.label :free_comment
+    = f.text_area :free_comment
+  .field
+    = f.label :app_name
+    = f.text_field :app_name
+  .actions = f.submit 'Save'
