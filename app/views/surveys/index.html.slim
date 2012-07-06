@@ -1,29 +1,18 @@
-h1 Listing surveys
+h1 This is Code2012 Survey API
+=link_to 'http://codejapan.jp/'
 
-table
-  tr
-    th Why
-    th How year
-    th Locale
-    th Languages
-    th Free comment
-    th App name
-    th
-    th
-    th
+h2 API
+li GET  /surveys(.:format)     surveys#index
+li POST /surveys(.:format)     surveys#create
 
-  - @surveys.each do |survey|
-    tr
-      td = survey.why
-      td = survey.how_year
-      td = survey.locale
-      td = survey.languages
-      td = survey.free_comment
-      td = survey.app_name
-      td = link_to 'Show', survey
-      td = link_to 'Edit', edit_survey_path(survey)
-      td = link_to 'Destroy', survey, :confirm => 'Are you sure?', :method => :delete
+h2 Params
+li survey[why]:test survey
+li survey[how_year]:5
+li survey[locale]:yokohama
+li survey[languages]:ruby
+li survey[free_comment]:
+li survey[app_name]:native
 
-br
-
-= link_to 'New Survey', new_survey_path
+h2 Usage
+li curl http://code-survey.herokuapp.com/surveys.json
+li curl -F 'survey[why]=from curl' http://code-survey.herokuapp.com/surveys.json

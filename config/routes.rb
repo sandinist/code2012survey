@@ -1,6 +1,6 @@
 Codejp2012::Application.routes.draw do
   root :to => "surveys#index"
-  resources :surveys,  :only => [:index, :create, :new]
+  resources :surveys,  :only => [:index, :create]
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
